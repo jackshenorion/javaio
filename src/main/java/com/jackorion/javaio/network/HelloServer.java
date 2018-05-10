@@ -19,7 +19,7 @@ public class HelloServer {
             Hello stub = (Hello) UnicastRemoteObject.exportObject(hello, 0);
             Registry registry = LocateRegistry.createRegistry(0);
             registry.bind("Hello", stub);
-            System.out.println("Server ready");
+            System.out.println("RefHelperServer ready");
         } catch (RemoteException e) {
             e.printStackTrace();
         } catch (AlreadyBoundException e) {
